@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Line Focus Reader",
+  "version": "1.0",
+  "description": "Focus on one line at a time with j/k navigation",
+  "content_scripts": [
+    {
+      "matches": ["https://www.learncpp.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
