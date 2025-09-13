@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Line Focus Reader Test</title>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <div class="entry-content">
+            <p>
+                This is a paragraph with some <code>inline code</code> that
+                should be preserved when highlighted.
+            </p>
+
+            <p>
+                Now, let's consider a compound expression, such as
+                <code>4 + 2 * 3</code>. Should this be grouped as
+                <code>(4 + 2) * 3</code> which evaluates to <code>18</code>, or
+                <code>4 + (2 * 3)</code> which evaluates to <code>10</code>?
+                Using normal mathematical precedence rules (which state that
+                multiplication is resolved before addition), we know that the
+                above expression should be grouped as
+                <code>4 + (2 * 3)</code> to produce the value <code>10</code>.
+                But how does the compiler know?
+            </p>
+
+            <p>
+                Here's another test with <strong>bold text</strong> and
+                <em>italic text</em> mixed with <code>some code</code> to see
+                how it handles multiple inline elements.
+            </p>
+
+            <p>
+                This paragraph has <code>multiple</code> different
+                <code>code blocks</code> that should all be
+                <strong>preserved</strong> properly.
+            </p>
+
+            <h2>Testing Headers</h2>
+
+            <p>Simple paragraph without any inline elements for comparison.</p>
+
+            <pre><code>function test() {
+    console.log("This is a code block");
+    return true;
+}</code></pre>
+
+            <p>Final test paragraph with <code>code</code> at the end.</p>
+        </div>
+
+        <script src="../content.js"></script>
+
+        <!--<div
+            style="
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background: #f0f0f0;
+                padding: 10px;
+                border-radius: 4px;
+                font-family: monospace;
+                font-size: 12px;
+            "
+        >
+            <strong>Instructions:</strong><br />
+            1. Press F9 to toggle Line Focus Reader<br />
+            2. Select text to start highlighting<br />
+            3. Use j/k or arrow keys to navigate<br />
+            4. Press 'd' to toggle DEBUG MODE<br />
+            5. Press 'c' to toggle center line<br />
+            6. Use +/- to adjust scroll position<br />
+            7. Check if code elements preserve styling<br />
+            <br />
+            <strong>Debug Mode:</strong> Shows line boundaries with<br />
+            colored borders and line numbers
+        </div>-->
+    </body>
+</html>
